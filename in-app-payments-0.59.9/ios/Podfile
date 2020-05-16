@@ -1,0 +1,28 @@
+platform :ios, '11.1'
+
+target 'RNInAppPaymentsQuickstart' do
+  use_frameworks!
+
+  rn_path = '../node_modules/react-native'
+  pod 'React', path: rn_path, subspecs: [
+  'CxxBridge',
+  'RCTText',
+  'RCTNetwork',
+  'RCTWebSocket',
+  'RCTAnimation',
+  'RCTActionSheet',
+  'RCTGeolocation',
+  'RCTImage',
+  'RCTSettings',
+  'RCTVibration',
+  'RCTLinkingIOS'
+  ]
+  pod 'yoga', :path => "#{rn_path}/ReactCommon/yoga"
+  pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
+  pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
+  pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+  
+  pod 'RNSquareInAppPayments', :path => '../node_modules/react-native-square-in-app-payments'
+  
+ 
+end
